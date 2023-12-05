@@ -4,10 +4,16 @@ body {
   padding: 50px;
 }
 
-.loader,
+.loader {
+  display: none;
+  color: black;
+  font-size: 25px;
+  margin-top: 25px;
+}
+
 .error {
   display: none;
-  color: green;
+  color: red;
   font-size: 30px;
   margin-top: 25px;
 }
