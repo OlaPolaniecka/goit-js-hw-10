@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api_key =
-  live_qguOE57bFHy0zBinBqymilsQ4Zv6cGaa7KGoY5Wzs5TOHnWDYy6PACel1FVkpmWm;
+  'live_qguOE57bFHy0zBinBqymilsQ4Zv6cGaa7KGoY5Wzs5TOHnWDYy6PACel1FVkpmWm';
 axios.defaults.headers.common['x-api-key'] = api_key;
 
 export const fetchBreeds = async () => {
