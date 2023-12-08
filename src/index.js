@@ -12,6 +12,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     catInfo.style.display = 'none';
   };
 
+  const hideselect = () => {
+    select.style.display = 'none';
+  };
+
+  const showselect = () => {
+    select.style.display = 'block';
+  };
+
   const hideLoader = () => {
     loader.style.display = 'none';
   };
@@ -23,10 +31,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   try {
     showLoader();
+    hideselect();
     const breeds = await fetchBreeds();
     select.innerHTML = breeds
       .map(breed => `<option value="${breed.id}">${breed.name}</option>`)
       .join('');
+    showselect();
     hideLoader();
   } catch (err) {
     showError(err.message);
